@@ -1,0 +1,47 @@
+import java.io.*; 
+  
+interface Vehicle { 
+    // all are the abstract methods. 
+    void changeGear(int a); 
+    void speedUp(int a); 
+    void applyBrakes(int a); 
+} 
+  
+class Bicycle implements Vehicle{ 
+    int speed; 
+    int gear; 
+
+    // to change gear 
+    @Override
+    public void changeGear(int newGear){ 
+    } 
+      
+    // to increase speed 
+    @Override
+    public void speedUp(int increment){ 
+    } 
+      
+    // to decrease speed 
+    @Override
+    public void applyBrakes(int decrement){ 
+    } 
+    
+    public void printStates() { 
+         System.out.println("speed: " + speed + " gear: " + gear); 
+    } 
+} 
+
+public class VehicleDemo { 
+    public static void main (String[] args) { 
+        // creating an inatance of Bicycle  
+        // doing some operations  
+        Bicycle bicycle = new Bicycle(); 
+        bicycle.changeGear(2); 
+        bicycle.speedUp(3); 
+        bicycle.applyBrakes(1); 
+        
+        System.out.println("Bicycle present state :"); 
+        bicycle.printStates();
+    } 
+} 
+
