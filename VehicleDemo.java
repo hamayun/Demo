@@ -60,7 +60,16 @@ class Bike implements Vehicle {
          System.out.println("speed: " + speed
              + " gear: " + gear);
     }
+}
 
+class SuperBike extends Bike {
+    String make;
+    int engineSize;
+
+    public SuperBike(String m, int s){
+	make = m;
+	engineSize = s;
+    }
 }
 
 public class VehicleDemo { 
